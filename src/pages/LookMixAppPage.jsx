@@ -9,7 +9,7 @@ import CoverLookMix from '../assets/CoverLookMix.png';
 import LookMixVideo from '../assets/Si-Application3.mp4'; 
 import LookMixUI from '../assets/LookMixUI.jpg';
 import Token from '../assets/Token.mp4';
-import BitClound from '../assets/Bit_clound.mp4'
+import BitClound from '../assets/Bit_Clound.mp4'
 import Npm from '../assets/Npm.mp4'
 import TestApp from '../assets/Testapp.mp4'
 
