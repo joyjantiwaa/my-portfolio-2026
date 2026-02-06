@@ -10,7 +10,7 @@ import LookMix from '../assets/LookMix.mp4';
 import cover1 from '../assets/cover1.jpg';
 import DesignProcess1 from'../assets/DesignProcess1.jpg';
 import SiteMap from'../assets/Site_map.jpg';
-import Competitor from'../assets/Competitor_analysis.jpg';
+import Competitor from'../assets/Competitor_Analysis.jpg';
 import Persona from'../assets/Persona.jpg';
 import UserFlow from '../assets/UserFlow.jpg'
 
