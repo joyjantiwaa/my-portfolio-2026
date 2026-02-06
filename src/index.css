@@ -1,0 +1,40 @@
+:root {
+  /* เปลี่ยนเป็น Inter */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark; /* ล็อคเป็น dark ตามธีมของคุณ */
+  background-color: #000000; /* หรือใช้ tokens.colors.background.primary */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ล้างค่าเริ่มต้นที่มักทำให้ Layout พัง */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* ลบ display: flex และ place-items: center ออก */
+}
+
+/* ล้าง Margin ให้หมดตามที่เราคุยกัน */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ลบสไตล์ปุ่มเริ่มต้นออก เพราะเราใช้ Button จาก DesignSystem.jsx อยู่แล้ว */
+button {
+  font-family: inherit;
+}
