@@ -1,14 +1,23 @@
-# My Design & Engineering Case Studies
+# My Design & Engineering Portfolio
 
-### 📱 Si-Applications: [ระบุจุดเด่น เช่น Enterprise Ecosystem]
-*Focus: Scalability, Design Ops, Complex Workflows*
-- **The Challenge:** Managing knowledge distribution across large-scale platforms.
-- **The Solution:** A modular component library designed for high-density information.
-- **Tech:** Design Tokens, Shared Libraries, Advanced State Management.
+This repository showcases my ability to bridge the gap between complex design problems and scalable code implementation.
 
-### 🧥 LookMix: AI-Powered Wardrobe System
-*Focus: AI Cost Optimization, System Thinking, Cross-Platform UI*
-- **The Challenge:** How to build an AI stylist that is business-sustainable.
-- **The Solution:** "Paper Doll" logic to reduce cloud processing costs and latency.
+## 🚀 Featured Projects
+
+### 01. Si-Applications: [จุดเด่นของ Si-App เช่น Enterprise Ecosystem]
+**Focus:** Design Ops, High-Density Information Design, Component Library.
+- **Problem:** [ใส่ปัญหาที่พี่แก้ใน Si-App]
+- **Key Solution:** Modular system for seamless cross-platform deployment.
+- **Tech:** React, Storybook, Design Tokens.
+
+### 02. LookMix: AI-Powered Wardrobe System
+**Focus:** AI Cost-Awareness, System Level Thinking, Cross-Platform Architecture.
+- **Problem:** Sustainable AI business models in fashion.
+- **Key Solution:** "Paper Doll" logic for optimized AI layering and 70% latency reduction.
 - **Tech:** React, Flutter, Framer Motion.
 
+---
+## 🛠 Core Skills
+- **UX Strategy:** Cost-aware design, System thinking.
+- **Development:** React (Web), Flutter (Mobile).
+- **Design Ops:** Design-to-Code automation, Shared libraries.
