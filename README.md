@@ -4,9 +4,9 @@ This repository showcases my ability to bridge the gap between complex design pr
 
 ## 🚀 Featured Projects
 
-### 01. Si-Applications: [จุดเด่นของ Si-App เช่น Enterprise Ecosystem]
+### 01. Si-Applications: The Student Portal wasn't just a new feature; it was a mission to bridge the gap between students and their futures. We faced a legacy of manual tracking and technical debt that hindered global education opportunities.
 **Focus:** Design Ops, High-Density Information Design, Component Library.
-- **Problem:** [ใส่ปัญหาที่พี่แก้ใน Si-App]
+- **Problem:** The absence of a design system led to a "Frankenstein UI"—inconsistent components that were difficult to scale, maintain, or trust for production-level stability.
 - **Key Solution:** Modular system for seamless cross-platform deployment.
 - **Tech:** React, Storybook, Design Tokens.
 
