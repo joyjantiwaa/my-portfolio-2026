@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { tokens } from '../styles/theme';
 import { Button, Menubar } from '../components/DesignSystem'; 
-import home5 from '../assets/home5.png'; 
 import bgImage1 from '../assets/background.jpg'; // ใช้ภาพนี้ทั้งคู่
-import bgImage2 from '../assets/Background2.jpg';
 import home2 from '../assets/home_2.png'
 
 const AboutMePage = () => {
