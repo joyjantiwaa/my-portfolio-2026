@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { tokens } from '../styles/theme';
 import { Button, Menubar } from '../components/DesignSystem'; 
 import bgImage1 from '../assets/background.jpg'; // ใช้ภาพนี้ทั้งคู่
-import home2 from '../assets/home_2.png'
+import home2 from '../assets/home_2.png';
+import CV from '../assets/CV-jantiwaphron-senior-uxui_compressed.pdf';
 
 const AboutMePage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1240);
@@ -52,12 +53,12 @@ const AboutMePage = () => {
           <h1 style={{ ...tokens.typography.heading.h1, color: tokens.colors.background.primary, margin: 0 }}>About me</h1>
           <h3 style={{ ...tokens.typography.heading.h3, color: tokens.colors.background.primary, margin: '8px 0' }}>-- UX/UI Designer</h3>
           <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, marginBottom: '32px' }}>Professional Product Designer</h6>
-          <a href="/files/handbook.pdf" download>
-            <Button type="primary">
-              ดาวน์โหลด PDF
+          <a href={CV} download>
+            <Button variant="primary" size="sm">
+              DOWNLOAD CV
             </Button>
           </a>
-        </div>
+          </div>
 
         {/* --- กล่องกลาง: เพิ่มภาพ home2 --- */}
         <div style={{ 
@@ -137,7 +138,11 @@ const AboutMePage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h1 style={{ ...tokens.typography.display, color: tokens.colors.background.primary, margin: 0, fontSize: '64px' }}>About me</h1>
           <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, margin: 0 }}>Professional Product Designer</h6>
-          <Button variant="primary" size="sm">Download CV</Button>
+          <a href={CV} download>
+            <Button variant="primary" size="sm">
+              Download CV
+            </Button>
+          </a>
         </div>
 
         <div style={{ 
