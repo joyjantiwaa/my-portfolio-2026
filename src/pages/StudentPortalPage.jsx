@@ -240,8 +240,8 @@ const CaseStudyPortal = () => {
         </motion.div>
 
         <motion.div variants={fUp} style={{ display: 'flex', gap: '16px' }}>
-          <Button variant="primary" size="sm" iconName="computer" onClick={() => window.open('https://github.com', '_blank')}>Code-to-design</Button>
-          <Button variant="primary" size="sm" iconName="palette" onClick={() => window.open('https://figma.com', '_blank')}>View Figma</Button>
+          <Button variant="primary" size="sm" iconName="computer" onClick={() => window.open('https://joyjantiwaa.github.io/student-portal/', '_blank')}>Code-to-design</Button>
+          <Button variant="primary" size="sm" iconName="palette" onClick={() => window.open('https://www.figma.com/design/xv8aaA7LfzkzJC3OWyuqer/si-applications.com?node-id=180545-216134&t=R8KABcuLvXRXwWml-1', '_blank')}>View Figma</Button>
         </motion.div>
       </motion.section>
 
@@ -663,7 +663,7 @@ const CaseStudyPortal = () => {
           <Button 
             variant="primary" 
             iconName="computer" 
-            onClick={() => window.open('https://github.com', '_blank')}
+            onClick={() => window.open('https://joyjantiwaa.github.io/student-portal/', '_blank')}
           >
             Design-to-code
           </Button>
