@@ -52,7 +52,11 @@ const AboutMePage = () => {
           <h1 style={{ ...tokens.typography.heading.h1, color: tokens.colors.background.primary, margin: 0 }}>About me</h1>
           <h3 style={{ ...tokens.typography.heading.h3, color: tokens.colors.background.primary, margin: '8px 0' }}>-- UX/UI Designer</h3>
           <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, marginBottom: '32px' }}>Professional Product Designer</h6>
-          <Button variant="primary" size="sm">Download CV</Button>
+          <a href="/files/handbook.pdf" download>
+            <Button type="primary">
+              ดาวน์โหลด PDF
+            </Button>
+          </a>
         </div>
 
         {/* --- กล่องกลาง: เพิ่มภาพ home2 --- */}
