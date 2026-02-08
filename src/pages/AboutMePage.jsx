@@ -113,8 +113,12 @@ const AboutMePage = () => {
               Tel: +66 063 652 7169
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
-              <Button variant="secondary" size='sm'>Student Portal</Button>
-              <Button variant="secondary" size='sm'>LookMix App</Button>
+              <Button variant="secondary" size='sm' onClick={() => navigate('/student-portal')}>
+              Student Portal
+              </Button>
+              <Button variant="secondary" size='sm' onClick={() => navigate('/lookmix-app')}>
+                LookMix App
+              </Button>
             </div>
           </div>
         </div>
@@ -137,7 +141,7 @@ const AboutMePage = () => {
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h1 style={{ ...tokens.typography.display, color: tokens.colors.background.primary, margin: 0, fontSize: '64px' }}>About me</h1>
-          <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, margin: 0 }}>Professional Product Designer</h6>
+          <p style={{ ...tokens.typography.boy.large, color: tokens.colors.background.primary, margin: 0 }}>Professional Product Designer</p>
           <a href={CV} download>
             <Button variant="primary" size="sm">
               Download CV
@@ -165,8 +169,12 @@ const AboutMePage = () => {
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-start' }}>
-            <Button variant="secondary" size='sm'>Student Portal</Button>
-            <Button variant="secondary" size='sm'>LookMix App</Button>
+            <Button variant="secondary" size='sm' onClick={() => navigate('/student-portal')}>
+              Student Portal
+            </Button>
+            <Button variant="secondary" size='sm' onClick={() => navigate('/lookmix-app')}>
+              LookMix App
+            </Button>
           </div>
         </div>
       </div>
