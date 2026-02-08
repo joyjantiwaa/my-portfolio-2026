@@ -173,20 +173,18 @@ const LookMixApp = () => {
           }}
         >
           {[
-            { label: "Marketing Website", link: "#" },
-            { label: "LookMix App", link: "#" },
-            { label: "Flutter Library", link: "#" },
-            { label: "React Library", link: "#" },
-            { label: "UX & Interaction", link: "#" }
+            { label: "Marketing Website", link: "https://my-web-project-virid.vercel.app/" },
+            { label: "LookMix App", link: "https://joyjantiwaa.github.io/lookmix_app/" },
+            { label: "Flutter Library", link: "https://pub.dev/packages/lookmix_design_system" },
+            { label: "React Library", link: "https://www.npmjs.com/package/@jpjoy-lookmix/lookmix-design-system" },
+            { label: "UX & Interaction", link: "https://www.figma.com/proto/ynYlFClGk7xVlGqImtzzj3/LookMix-Library?node-id=149-399&p=f&t=WzurYWYYoKugG1XJ-1&scaling=min-zoom&content-scaling=fixed&page-id=21%3A1712&starting-point-node-id=149%3A399" }
           ].map((btn, idx) => (
             <Button 
               key={idx}
               variant="primary" 
-              // ในมือถืออาจจะปรับขนาดให้เล็กลงหน่อย หรือใช้ sm เท่าเดิมแต่คุมความกว้าง
               size="sm" 
               onClick={() => window.open(btn.link, '_blank')}
               style={{ 
-                // ในมือถือ: 1 แถวมี 2 ปุ่ม (ลบ gap ออกนิดหน่อย) หรือปล่อยให้ยืดตามข้อความ
                 flex: isMobile ? '1 1 calc(45% - 10px)' : '0 1 auto',
                 minWidth: isMobile ? '140px' : 'auto',
                 textAlign: 'center',
@@ -354,8 +352,8 @@ const LookMixApp = () => {
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             {/* Tech Badges with Real Links */}
             {[
-              { name: 'Flutter', url: 'https://flutter.dev' },
-              { name: 'React', url: 'https://react.dev' },
+              { name: 'Flutter', url: 'https://pub.dev/packages/lookmix_design_system' },
+              { name: 'React', url: 'https://www.npmjs.com/package/@jpjoy-lookmix/lookmix-design-system' },
             ].map((tech) => (
               <a
                 key={tech.name}
@@ -468,7 +466,7 @@ const LookMixApp = () => {
         <Button 
           variant="primary" 
           size="sm" 
-          onClick={() => window.open('https://g1lvpsgb.preview.v2.bit.cloud/api/bitdev.react/react-env@4.1.36/~aspect/env-template/compositions/?compId=jpjoy.design/jpjoy-theme@e120604183278ef6ae56b04c9b082470bae9868d#jpjoy.design/jpjoy-theme@e120604183278ef6ae56b04c9b082470bae9868d?preview=compositions&name=LightTheme', '_blank')}
+          onClick={() => window.open('https://joyjantiwaa.github.io/lookmix_app/', '_blank')}
         >
           Try App Demo
         </Button>
@@ -476,7 +474,7 @@ const LookMixApp = () => {
         <Button 
           variant="tertiary" 
           size="sm" 
-          onClick={() => window.open('https://www.figma.com/design/ynYlFClGk7xVlGqImtzzj3/LookMix-Library?node-id=1-2064&t=VPDjLPoodc3MP4xT-1', '_blank')}
+          onClick={() => window.open('https://www.figma.com/proto/ynYlFClGk7xVlGqImtzzj3/LookMix-Library?node-id=149-399&p=f&t=WzurYWYYoKugG1XJ-1&scaling=min-zoom&content-scaling=fixed&page-id=21%3A1712&starting-point-node-id=149%3A399', '_blank')}
         >
           Figma file
         </Button>
@@ -511,7 +509,7 @@ const LookMixApp = () => {
               {
                 step: "Step 1: System Definition",
                 video: Token, // ใช้ Video ตัวเดียวกับข้างบนหรือตัวที่เหมาะสม
-                link: "https://figma.com",
+                link: "https://joyjantiwaa.github.io/lookmix-design-system/",
                 content: (
                   <ul style={{ ...t.typography.body.normal, color: t.colors.text.secondary, paddingLeft: '20px', margin: 0 }}>
                     <li>Design tokens (color, typography, spacing)</li>
@@ -542,7 +540,7 @@ const LookMixApp = () => {
               {
                 step: "Step 3: Real Usage Validation",
                 video: TestApp,
-                link: "https://your-demo-link.com",
+                link: "https://joyjantiwaa.github.io/lookmix_app/",
                 content: (
                   <>
                     <p style={{ ...t.typography.body.normal, color: t.colors.text.secondary }}>
@@ -553,8 +551,8 @@ const LookMixApp = () => {
                       <li>Versioning and backward compatibility challenges</li>
                     </ul>
                     <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
-                      <Button variant="primary" size="sm" onClick={() => window.open('https://pub.dev', '_blank')}>App Demo</Button>
-                      <Button variant="tertiary" size="sm" onClick={() => window.open('https://www.npmjs.com', '_blank')}>Marketing Website</Button>
+                      <Button variant="primary" size="sm" onClick={() => window.open('https://joyjantiwaa.github.io/lookmix_app/', '_blank')}>App Demo</Button>
+                      <Button variant="tertiary" size="sm" onClick={() => window.open('https://my-web-project-virid.vercel.app/', '_blank')}>Marketing Website</Button>
                     </div>
                   </>
                 )
@@ -759,7 +757,7 @@ const LookMixApp = () => {
             <p style={{ ...t.typography.body.normal, marginBottom: '40px', color: t.colors.text.secondary, opacity: 0.8 }}>
               A comprehensive learning management system designed for seamless knowledge distribution and tracking.
             </p>
-            <Button variant="primary" size='sm' onClick={() => navigate('/next-project')}>
+            <Button variant="primary" size='sm' onClick={() => navigate('/student-portal')}>
               View Project Details
             </Button>
           </div>
