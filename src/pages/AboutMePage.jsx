@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // นำเข้า useNavigate
 import { tokens } from '../styles/theme';
 import { Button, Menubar } from '../components/DesignSystem'; 
-import bgImage1 from '../assets/background.jpg'; // ใช้ภาพนี้ทั้งคู่
+import bgImage1 from '../assets/background.jpg'; 
 import home2 from '../assets/home_2.png';
 import CV from '../assets/CV-jantiwaphron-senior-uxui_compressed.pdf';
 
 const AboutMePage = () => {
+  const navigate = useNavigate(); // ประกาศใช้งาน navigate
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1240);
 
   useEffect(() => {
@@ -26,10 +28,10 @@ const AboutMePage = () => {
     flexDirection: isMobile ? 'column' : 'row',
     overflow: 'hidden',
     position: 'relative',
-    // แก้ไข: ใช้ bgImage1 (เหมือนมือถือ) ทั้งหมด
     backgroundImage: `url(${bgImage1})`, 
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
   };
 
   // --- DESKTOP LAYOUT ---
@@ -38,34 +40,33 @@ const AboutMePage = () => {
       <div style={containerStyle}>
         <Menubar variant="primary" />
 
-        {/* กล่องขวา: About Me */}
+        {/* ส่วนข้อมูลหลัก */}
         <div style={{ 
           flex: 1, 
           display: 'flex', 
           flexDirection: 'column', 
           justifyContent: 'center', 
-          paddingRight: '56px',
+          paddingLeft: '80px', // ปรับให้ห่างขอบซ้าย
           alignItems: 'flex-start',
           textAlign: 'left',
-          marginLeft: '48px',
           zIndex: 2
         }}>
           <h1 style={{ ...tokens.typography.heading.h1, color: tokens.colors.background.primary, margin: 0 }}>About me</h1>
           <h3 style={{ ...tokens.typography.heading.h3, color: tokens.colors.background.primary, margin: '8px 0' }}>-- UX/UI Designer</h3>
           <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, marginBottom: '32px' }}>Professional Product Designer</h6>
-          <a href={CV} download>
+          <a href={CV} download style={{ textDecoration: 'none' }}>
             <Button variant="primary" size="sm">
               DOWNLOAD CV
             </Button>
           </a>
-          </div>
+        </div>
 
-        {/* --- กล่องกลาง: เพิ่มภาพ home2 --- */}
+        {/* ส่วนภาพประกอบกลางหน้าจอ */}
         <div style={{ 
-          flex: 1.2, // ให้พื้นที่ตรงกลางกว้างกว่านิดหน่อย
+          flex: 1.2, 
           display: 'flex', 
           justifyContent: 'center', 
-          alignItems: 'flex-end', // ให้ภาพวางอยู่ฐานล่างเหมือนหน้า Home
+          alignItems: 'flex-end', 
           height: '100%',
           zIndex: 2 
         }}>
@@ -80,16 +81,15 @@ const AboutMePage = () => {
           />
         </div>
 
-        {/* กล่องซ้าย: Effect Glass */}
+        {/* ส่วนข้อมูลติดต่อและลิงก์ผลงาน (Glass Effect) */}
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 
           flex: 1, 
-          paddingLeft: '56px', 
+          paddingRight: '80px', 
           justifyContent: 'center',
-          alignItems: 'flex-start',
+          alignItems: 'flex-end',
           zIndex: 2,
-          marginRight: '24px',
         }}>
           <div style={{ 
             maxWidth: '420px',
@@ -99,22 +99,18 @@ const AboutMePage = () => {
             borderRadius: '32px',
             border: `1px solid ${tokens.colors.background.primary}` 
           }}>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: '0 0 8px 0' }}>
+            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: '0 0 16px 0' }}>
               I am a UX/UI Designer who bridges design and code to help teams ship real products.
             </p>
-            <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, margin: 0 }}>Contact</h6>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary }}>
-              Jantiwaphron Permsombat (Joy)
-            </p>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>
-              Email: jantiwaphron@gmail.com
-            </p>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: '0 0 24px 0' }}>
-              Tel: +66 063 652 7169
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
+            <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, margin: '0 0 8px 0' }}>Contact</h6>
+            <div style={{ marginBottom: '24px' }}>
+              <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Jantiwaphron Permsombat (Joy)</p>
+              <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Email: jantiwaphron@gmail.com</p>
+              <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Tel: +66 063 652 7169</p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'stretch' }}>
               <Button variant="secondary" size='sm' onClick={() => navigate('/student-portal')}>
-              Student Portal
+                Student Portal
               </Button>
               <Button variant="secondary" size='sm' onClick={() => navigate('/lookmix-app')}>
                 LookMix App
@@ -126,7 +122,7 @@ const AboutMePage = () => {
     );
   }
 
-  // --- MOBILE LAYOUT (คงเดิม) ---
+  // --- MOBILE LAYOUT ---
   return (
     <div style={{...containerStyle, padding: '80px 24px', position: 'relative', height: '100dvh', justifyContent: 'center'}}>
       <Menubar variant="primary" />
@@ -141,8 +137,8 @@ const AboutMePage = () => {
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h1 style={{ ...tokens.typography.display, color: tokens.colors.background.primary, margin: 0, fontSize: '64px' }}>About me</h1>
-          <p style={{ ...tokens.typography.boy.large, color: tokens.colors.background.primary, margin: 0 }}>Professional Product Designer</p>
-          <a href={CV} download>
+          <p style={{ ...tokens.typography.body?.large || {}, color: tokens.colors.background.primary, margin: 0 }}>Professional Product Designer</p>
+          <a href={CV} download style={{ textDecoration: 'none' }}>
             <Button variant="primary" size="sm">
               Download CV
             </Button>
@@ -158,17 +154,11 @@ const AboutMePage = () => {
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', textAlign: 'left' }}>
             <h6 style={{ ...tokens.typography.heading.h6, color: tokens.colors.background.primary, margin: 0 }}>Contact</h6>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>
-              Jantiwaphron Permsombat (Joy)
-            </p>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>
-              Email: jantiwaphron@gmail.com
-            </p>
-            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>
-              Tel: +66 063 652 7169
-            </p>
+            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Jantiwaphron Permsombat (Joy)</p>
+            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Email: jantiwaphron@gmail.com</p>
+            <p style={{ ...tokens.typography.body.normal, color: tokens.colors.background.primary, margin: 0 }}>Tel: +66 063 652 7169</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'stretch' }}>
             <Button variant="secondary" size='sm' onClick={() => navigate('/student-portal')}>
               Student Portal
             </Button>
