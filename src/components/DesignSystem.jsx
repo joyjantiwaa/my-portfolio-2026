@@ -125,7 +125,7 @@ export const Menubar = ({ variant = 'primary' }) => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       flexDirection: 'column',
-      justifyContent: 'flex-start'
+      justifyContent: 'center',
     } : (variant === 'secondary' ? {
       backgroundColor: tokens.colors.background.secondary,
       ...tokens.effects.glass,
@@ -166,7 +166,6 @@ export const Menubar = ({ variant = 'primary' }) => {
         flexDirection: isMobile ? 'column' : 'row',
         gap: isMobile ? '40px' : '60px', 
         alignItems: 'center',
-        marginTop: isMobile && isOpen ? '80px' : '0'
       }}>
         {['/', '/student-portal', '/lookmix-app', '/about-me']
           .filter(path => path !== '/') // 1. กรองหน้า Home ออกจากเมนู
